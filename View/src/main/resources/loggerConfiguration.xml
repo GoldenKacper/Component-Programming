@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n %highlight{%level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=blue, DEBUG=green}}</Pattern>
+            </PatternLayout>
+        </Console>
+        <File name="File" fileName="Sudoku.log">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%nw %highlight{%level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=blue, DEBUG=green}</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.apache.test" level="INFO" additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File"/>
+        </Logger>
+    </Loggers>
+    <Root level="INFO">
+        <AppenderRef ref="Console" />
+        <AppenderRef ref="File"/>
+    </Root>
+</Configuration>

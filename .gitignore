@@ -1,0 +1,8 @@
+target/
+*.zip
+build/
+dist/
+nbproject/
+.idea/
+*.iml
+*.txt
